@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Homography Lab is an interactive educational companion to our NYU Robot Perception Creative Project 1 comic. Robot H guides learners from a flat city map to a perspective view, connecting visual experiments with the mathematics behind planar transformations. Explore freely or follow a five-stage classroom demonstration. The original 14-page comic is included, with Team 12 credit and contextual links from the experiments.
+Homography Lab is an interactive educational companion to our NYU Robot Perception Creative Project 1 comic. Robot H guides learners from a flat city map to a perspective view, connecting visual experiments with the mathematics behind planar transformations. Explore freely or follow a five-stage classroom demonstration. The original 14-page comic is included, with Team 12 credit and contextual links from the experiments. Comic slides link: https://docs.google.com/presentation/d/1_wD71H8vJC1RAoZC2de5AOFbbW1xu6FpE8jAEqopa9s/edit?usp=sharing
 
 ## Features
 
