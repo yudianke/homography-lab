@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WebGL warp regression checks</title>
+    <style>
+      body {
+        font: 16px system-ui;
+        margin: 24px;
+        color: #234;
+      }
+      canvas {
+        width: 400px;
+        max-width: 100%;
+        border: 1px solid #ccd;
+      }
+      pre {
+        white-space: pre-wrap;
+      }
+      button {
+        padding: 12px;
+        margin: 12px;
+      }
+      #source {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WebGL warp regression checks</h1>
+    <p>
+      Uses the production renderer, source artwork, and homography engine. CPU
+      inverse sampling checks actual GPU pixels.
+    </p>
+    <button id="run">Run GPU checks</button
+    ><button id="context">Test context recovery and unmount</button>
+    <div id="lifecycle"></div>
+    <div id="source"></div>
+    <canvas id="output"></canvas>
+    <pre id="results">Ready</pre>
+    <script type="module" src="./warp.browser.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Rectification GPU verification</title>
+  <style>
+    body {
+      font: 16px system-ui;
+      margin: 24px;
+    }
+    canvas {
+      max-width: 100%;
+      width: 800px;
+      border: 1px solid #ccd;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+    .texture-source {
+      display: none;
+    }
+    button {
+      padding: 12px;
+      margin: 8px;
+    }
+  </style>
+  <h1>Rectification GPU verification</h1>
+  <button id="run">Run rectification GPU checks</button
+  ><button id="context">Test rectification context recovery</button>
+  <pre id="result">Ready</pre>
+  <canvas id="output"></canvas>
+  <div id="lifecycle"></div>
+  <script type="module" src="./rectification-gpu.tsx"></script>
+</html>
