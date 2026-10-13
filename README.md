@@ -57,7 +57,7 @@ The production build was served and tested locally under `/homography-lab/`, inc
 
 ## Live Demo
 
-**Placeholder — not deployed:** https://YOUR_USERNAME.github.io/homography-lab/
+**Placeholder — not deployed:** https://yudianke.github.io/homography-lab/
 
 The repository owner must create the repository and publish the site manually. A local Pages workflow is included.
 
