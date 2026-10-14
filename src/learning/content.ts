@@ -21,7 +21,7 @@ export const COMIC_PAGES = [
       "Three panels introduce observing a viewpoint, matching the same physical landmarks, and rectifying one planar view into another. The illustrated workflow is Observe, Match, Transform.",
   },
   {
-    title: "A Map, Two Views",
+    title: "Why Maps Look Skewed",
     summary:
       "H notices that a flat map looks tilted. Rays connect the map plane through the camera center to the image plane. Rotation and uniform scaling cannot remove general perspective; a homography links the plane's two views.",
   },
@@ -41,7 +41,7 @@ export const COMIC_PAGES = [
       "Four panels show that straight lines and incidence remain, angles can change, equal steps can look unequal, and a homography is not a free-form rubber-sheet warp. Midpoints and ordinary distance ratios need not remain the same.",
   },
   {
-    title: "Four Pairs, One Rule",
+    title: "Finding the Mapping",
     summary:
       "Match the same four landmarks in two views. Each pair supplies two independent constraints; use distinct points with no three collinear in either set. Spread-out matches improve stability. Noisy matches and outliers motivate later robust methods.",
   },
@@ -69,6 +69,11 @@ export const COMIC_PAGES = [
     title: "Beyond the Flat Map",
     summary:
       "Advanced reading: homogeneous geometry includes points at infinity. Points transform as p′ ∼ Hp, lines as l′ ∼ H⁻ᵀl. Incidence and cross-ratio are preserved. Camera motion and plane geometry shape H; the fundamental matrix instead relates points to epipolar lines.",
+  },
+  {
+    title: "References",
+    summary:
+      "Sources for the comic include Hartley and Zisserman’s Multiple View Geometry in Computer Vision, Szeliski’s Computer Vision: Algorithms and Applications, and OpenCV tutorials on feature matching and homography. Each reference identifies the comic topics it supports.",
   },
 ] as const;
 export function comicPage(page: number) {

@@ -83,11 +83,11 @@ function ComicReader({
           ))}
         </select>
       </label>
-      <button disabled={page === 14} onClick={() => changePage(page + 1)}>
+      <button disabled={page === COMIC_PAGES.length} onClick={() => changePage(page + 1)}>
         Next page
       </button>
       <span role="status" aria-live="polite">
-        Page {page} of 14
+        Page {page} of {COMIC_PAGES.length}
       </span>
     </div>
   );
@@ -120,7 +120,7 @@ function ComicReader({
     >
       <div className="comic-heading">
         <div>
-          <p className="eyebrow">CREATIVE PROJECT 1 · 14 ORIGINAL PAGES</p>
+          <p className="eyebrow">CREATIVE PROJECT 1 · {COMIC_PAGES.length} ORIGINAL PAGES</p>
           <h2 id="comic-title">Explore the Original Comic</h2>
         </div>
         <button onClick={onClose}>Return to Interactive Lab</button>
@@ -142,7 +142,7 @@ function ComicReader({
               Open original PDF (new tab)
             </a>
             <a href={PDF} download>
-              Download original PDF · 5.2 MB
+              Download original PDF · 6.2 MB
             </a>
           </div>
           {summary}

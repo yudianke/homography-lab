@@ -11,9 +11,9 @@ import {
   conceptPage,
   journeyState,
 } from "../src/learning/content.ts";
-test("All fourteen numbered comic pages have unique titles, accessible summaries and bounded assets", () => {
-  assert.equal(COMIC_PAGES.length, 14);
-  assert.equal(new Set(COMIC_PAGES.map((p) => p.title)).size, 14);
+test("All fifteen numbered comic pages have unique titles, accessible summaries and bounded assets", () => {
+  assert.equal(COMIC_PAGES.length, 15);
+  assert.equal(new Set(COMIC_PAGES.map((p) => p.title)).size, 15);
   COMIC_PAGES.forEach((p, i) => {
     assert.ok(p.summary.length > 80);
     const asset = new URL(`../public${comicPagePath(i + 1)}`, import.meta.url);
@@ -25,12 +25,12 @@ test("All fourteen numbered comic pages have unique titles, accessible summaries
 });
 test("Reader page navigation is bounded and safe for invalid input", () => {
   assert.equal(comicPage(0), 1);
-  assert.equal(comicPage(15), 14);
+  assert.equal(comicPage(16), 15);
   assert.equal(comicPage(8), 8);
   assert.equal(comicPage(NaN), 1);
   assert.equal(comicPage(Infinity), 1);
   assert.equal(comicPage(9.9), 9);
-  assert.equal(comicPagePath(14), "/comic/page-14.webp");
+  assert.equal(comicPagePath(15), "/comic/page-15.webp");
 });
 test("Chapter links match inspected physical PDF pages, not chapter numbers", () => {
   assert.deepEqual(CHAPTERS, {
@@ -74,6 +74,6 @@ test("Original PDF is byte-for-byte preserved", () => {
   );
   assert.equal(
     createHash("sha256").update(pdf).digest("hex"),
-    "4a868d4ae1216df5cd146a886a39039c05e32d89baa20f7a98f51ced47209e2a",
+    "6c1c13224a7b4e78aaccb32bc8fc6efc00ff24261d57347c2d9b2e67492486d8",
   );
 });

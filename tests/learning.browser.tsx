@@ -52,7 +52,7 @@ document.querySelector("#run")!.addEventListener("click", async () => {
     log.push("PASS No full comic page is mounted before the reader opens");
     await click("Explore the Original Comic");
     await wait(() => !!fixture.querySelector("#comic-reader"));
-    for (let page = 1; page <= 14; page++) {
+    for (let page = 1; page <= 15; page++) {
       await wait(() => {
         const image =
           fixture.querySelector<HTMLImageElement>(".comic-page img");
@@ -66,7 +66,7 @@ document.querySelector("#run")!.addEventListener("click", async () => {
         fixture.querySelectorAll(".comic-page img").length === 1,
         "More than one page mounted",
       );
-      if (page < 14) await click("Next page");
+      if (page < 15) await click("Next page");
     }
     assert(button("Next page").disabled, "Next not bounded");
     await click("Previous page");
@@ -74,7 +74,7 @@ document.querySelector("#run")!.addEventListener("click", async () => {
       fixture
         .querySelector(".comic-page img")
         ?.getAttribute("src")
-        ?.endsWith("13.webp"),
+        ?.endsWith("14.webp"),
       "Previous failed",
     );
     await click("Enlarge page");
@@ -87,7 +87,7 @@ document.querySelector("#run")!.addEventListener("click", async () => {
     await click("Return to Interactive Lab");
     assert(!fixture.querySelector("#comic-reader"), "Reader did not close");
     log.push(
-      "PASS All 14 pages load individually, navigation bounds, enlarged reading and return focus",
+      "PASS All 15 pages load individually, navigation bounds, enlarged reading and return focus",
     );
     for (const [text, page] of [
       ["Why the map looks skewed · PDF 5–7", 5],

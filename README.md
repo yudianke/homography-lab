@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Homography Lab is an interactive educational companion to our NYU Robot Perception Creative Project 1 comic. Robot H guides learners from a flat city map to a perspective view, connecting visual experiments with the mathematics behind planar transformations. Explore freely or follow a five-stage classroom demonstration. The original 14-page comic is included, with Team 12 credit and contextual links from the experiments. Comic slides link: https://docs.google.com/presentation/d/1_wD71H8vJC1RAoZC2de5AOFbbW1xu6FpE8jAEqopa9s/edit?usp=sharing
+Homography Lab is an interactive educational companion to our NYU Robot Perception Creative Project 1 comic. Robot H guides learners from a flat city map to a perspective view, connecting visual experiments with the mathematics behind planar transformations. Explore freely or follow a five-stage classroom demonstration. The revised 15-page comic, including References, is included, with Team 12 credit and contextual links from the experiments. Comic slides link: https://docs.google.com/presentation/d/1_wD71H8vJC1RAoZC2de5AOFbbW1xu6FpE8jAEqopa9s/edit?usp=sharing
 
 ## Features
 
@@ -57,10 +57,14 @@ The production build was served and tested locally under `/homography-lab/`, inc
 
 ## Live Demo
 
-**Placeholder — not deployed:** https://yudianke.github.io/homography-lab/
+[Live demo](https://yudianke.github.io/homography-lab/)
 
-The repository owner must create the repository and publish the site manually. A local Pages workflow is included.
+[GitHub repository](https://github.com/yudianke/homography-lab)
+
+The repository owner manages publication manually. A local Pages workflow is included.
 
 ## Limitations
 
 GPU image rendering requires a WebGL-compatible browser. Without WebGL, the lab displays guidance and disables rectification while retaining mathematical explanations, geometry overlays and the comic. Extreme perspective compression may reduce visual detail; image rectification cannot recover lost information. Comic pages are raster previews with summaries, not complete text transcriptions. Physical touch and every browser/device combination have not been tested.
+
+This interactive demo was developed with the assistance of OpenAI Codex.

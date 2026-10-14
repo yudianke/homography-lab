@@ -28,12 +28,12 @@
 - **48/48 Node tests passed**: all prior 47 tests plus root/subpath asset resolution. Existing tests cover invalid/crossed/degenerate quadrilaterals and numerical robustness.
 - `npm run typecheck` and `npm run build -- --mode pages` passed. An isolated clean `npm ci --offline --no-audit --no-fund` installed the locked dependencies successfully.
 - Browser release harness passed three component mount/unmount cycles, 300 rapid keyboard corner updates total, resizing, nine Reset/Rectify/close sequences, valid-handle cleanup checks, and forced WebGL initialization failure with disabled Rectify and working comic.
-- Original browser guide harness passed all fourteen page loads, page boundaries, chapter links, dialog focus restoration, the complete five-stage journey, geometry modes, rectification and exits without corner reset.
+- Original browser guide harness passed all then-current page loads, page boundaries, chapter links, dialog focus restoration, the complete five-stage journey, geometry modes, rectification and exits without corner reset.
 - Warp GPU pixel checks passed identity/default/trapezoid/extreme/mobile/2× resolution, reset, grid caching, landmarks and disposal. Maximum sampled channel error was 0.712/255. A local 120-update draw/solve check took 18.9 ms; it is not an FPS guarantee.
 - Rectification GPU tests passed four configurations with 2,116 pixel samples each; maximum channel error was 0.894/255. Tests confirmed orientation, transparent missing areas, actual intermediate-image dependence, unchanged source and disposal.
 - Both WebGL component context-loss/restoration/unmount checks passed.
 - Production simulation at `http://127.0.0.1:4180/homography-lab/` passed script/CSS loading, lazy comic loading, keyboard and actual pointer dragging, all teaching modes, perspective example, rectification, navigation and refresh. Actual pointer dragging moved A from (122,40) to approximately (161.3,66.2).
-- All **20 production files** matched their built bytes over HTTP, including 14 page images, the original PDF, portrait, CSS, main JS, lazy reader JS and index. This detects missing-file HTML fallbacks, not merely HTTP 200 responses.
+- All **20 production files** matched their built bytes over HTTP, including the then-current page images, the original PDF, portrait, CSS, main JS, lazy reader JS and index. This detects missing-file HTML fallbacks, not merely HTTP 200 responses.
 - Desktop and narrow production layouts inspected; narrow document width and scroll width both measured 342 CSS pixels. Final guide labels are fully readable. No warnings/errors in the inspected production browser console.
 
 Final bundle: main JS **280.95 KB / 89.53 KB gzip**, lazy reader **4.42 / 1.82 KB**, CSS **20.85 / 5.58 KB**. The main JS increased about 1.09 KB uncompressed from Step 7. Comic media stays separate and only the current reader page is mounted.
